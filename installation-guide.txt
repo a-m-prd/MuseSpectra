@@ -1,0 +1,4 @@
+-Copy Files
+-Start Solution
+-Download NuGet-Packages: -Entity Framework
+			  -NAudio

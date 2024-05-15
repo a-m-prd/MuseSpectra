@@ -1,0 +1,58 @@
+        private Shape CreateShape(double size) {
+            Shape shape;
+            switch (_selectedShape) {
+                case "Rectangle":
+                    shape = new Rectangle {
+                        Width = size,
+                        Height = size
+                    };
+                    break;
+                case "Triangle":
+                    shape = CreateTriangle(size);
+                    break;
+                case "Polygon":
+                    shape = CreatePolygon(size);
+                    break;
+                default:
+                    shape = new Ellipse {
+                        Width = size,
+                        Height = size
+                    };
+                    break;
+            }
+            return shape;
+        }
+
+        private Shape CreateTriangle(double size) {
+            PointCollection points = new PointCollection
+            {
+                new Point(size / 2, 0),
+                new Point(0, size),
+                new Point(size, size)
+            };
+            return new Polygon { Points = points, Width = size, Height = size };
+        }
+
+        private Shape CreatePolygon(double size) {
+            PointCollection points = new PointCollection();
+            int numSides = _random.Next(5, 10); // Random number of sides between 5 and 10
+            for (int i = 0; i < numSides; i++) {
+                double angle = i * 2 * Math.PI / numSides;
+                points.Add(new Point(size / 2 * (1 + Math.Cos(angle)), size / 2 * (1 - Math.Sin(angle))));
+            }
+            return new Polygon { Points = points, Width = size, Height = size };
+        }
+-Calculation of the shapes.
+
+        private void InitializeAudio() {
+            try {
+                _waveIn = new WasapiLoopbackCapture();
+                _waveIn.DataAvailable += OnDataAvailable;
+                _waveIn.RecordingStopped += OnRecordingStopped;
+                _waveIn.StartRecording();
+            }
+            catch (Exception ex) {
+                MessageBox.Show($"Error initializing audio input: {ex.Message}");
+            }
+        }
+-Recording sounds.
