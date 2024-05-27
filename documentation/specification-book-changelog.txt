@@ -1,0 +1,6 @@
+- removed streaming providers because it doesn't make sense when the audio is being taken from the system
+- altered profile loading to remember each users settings because not enough effects to really create complex profiles that need to be saved
+- added "start with Windows"
+- added icon + notification tray
+- added help button => user-guide.txt
+- turned project into a prototype because development environment not optimal

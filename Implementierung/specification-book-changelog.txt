@@ -1,2 +1,0 @@
-- removed streaming providers because it doesn't make sense when the audio is being taken from the system
-- altered profile loading to remember each users settings because not enough effects to really create complex profiles that need to be saved

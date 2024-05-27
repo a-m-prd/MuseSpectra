@@ -1,4 +1,1 @@
--Copy Files
--Start Solution
--Download NuGet-Packages: -Entity Framework
-			  -NAudio
+- double click setup.exe in /Hausarbeit - HBFSWI_Alexander_Melchior\release

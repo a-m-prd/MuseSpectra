@@ -1,0 +1,22 @@
+﻿<Window x:Class="MuseSpectra.Views.RegisterWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MuseSpectra.Views"
+        mc:Ignorable="d"
+        Title="Register" Height="300" Width="400"
+        WindowStartupLocation="CenterScreen">
+    <Grid Margin="10">
+        <StackPanel>
+            <Label>Username:</Label>
+            <TextBox Name="UsernameTextBox" Margin="5"/>
+            <Label>Password:</Label>
+            <PasswordBox Name="PasswordBox" Margin="5"/>
+            <Label>E-Mail:</Label>
+            <TextBox Name="EmailTextBox" Margin="5"/>
+            <Button Content="Register" Click="RegisterButton_Click" Margin="10"/>
+            <Button Content="Back" Click="RegisterBackButton_Click" Margin="10"/>
+        </StackPanel>
+    </Grid>
+</Window>
